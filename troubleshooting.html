@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPad & Ingenico Troubleshooting Guide</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Troubleshooting iPad and Ingenico Link/2500 Pairing</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="troubleshooting.html" class="active">Troubleshooting</a>
+    <a href="setup.html">Setup Guides</a>
+    <a href="resources.html">Resources</a>
+  </nav>
+
+  <main>
+    <h2>Interactive Troubleshooting Guide</h2>
+    <p>Follow the steps below to diagnose and resolve pairing issues between an iPad and Ingenico device.</p>
+
+    <!-- Step 1 -->
+    <details>
+      <summary>1️⃣ Check Bluetooth Icon on Ingenico</summary>
+      <div class="step">
+        <p>Look for the Bluetooth icon on the Ingenico display:</p>
+        <ul>
+          <li>No icon → Bluetooth is disabled</li>
+          <li>White icon → Bluetooth on, not paired</li>
+          <li>Orange icon → Searching for iPad</li>
+          <li>Green icon → Connected successfully</li>
+        </ul>
+
+        <label for="btStatus">Select what you see:</label>
+        <select id="btStatus">
+          <option value="">-- Choose an option --</option>
+          <option value="none">No Bluetooth Icon</option>
+          <option value="white">White Icon</option>
+          <option value="orange">Orange Icon</option>
+          <option value="green">Green Icon</option>
+        </select>
+
+        <div class="resolution">
+          <label><input type="checkbox" id="resolved1" /> Issue Resolved</label>
+          <label><input type="checkbox" id="tier2_1" /> Needs Tier II Assistance</label>
+          <p id="feedback1" style="display:none; margin-top:0.5rem;"></p>
+        </div>
+
+        <button class="next-btn" data-next="1">Next Step</button>
+      </div>
+    </details>
+
+    <!-- Step 2 -->
+    <details>
+      <summary>2️⃣ No Bluetooth Icon? Enable Bluetooth</summary>
+      <div class="step">
+        <p>Enable Bluetooth on the Ingenico device:</p>
+        <ol>
+          <li>Press <strong>0001</strong> on the Cricket screen → Admin Menu</li>
+          <li>Press <strong>2</strong> → Bluetooth Parameters</li>
+          <li>Select <strong>1</strong> → “Switch On”</li>
+          <li>If only “Switch Off” appears, toggle off → wait 10s → switch back on</li>
+          <li>If still not working, reboot Ingenico (<strong>.,#*</strong> + <strong>Yellow</strong> keys)</li>
+        </ol>
+
+        <div class="resolution">
+          <label><input type="checkbox" id="resolved2" /> Issue Resolved</label>
+          <label><input type="checkbox" id="tier2_2" /> Needs Tier II Assistance</label>
+          <p id="feedback2" style="display:none; margin-top:0.5rem;"></p>
+        </div>
+
+        <button class="next-btn" data-next="2">Next Step</button>
+      </div>
+    </details>
+
+    <!-- Step 3 -->
+    <details>
+      <summary>3️⃣ Bluetooth Icon is Orange</summary>
+      <div class="step">
+        <p>Orange icon → paired but cannot locate iPad.</p>
+        <ul>
+          <li>Ensure iPad Bluetooth is ON (Settings → Bluetooth)</li>
+          <li>Keep devices close together</li>
+          <li>Verify Ingenico is paired to correct iPad:</li>
+          <ol>
+            <li>Press <strong>2634</strong> → F key → Control Panel → Terminal Settings → Comm means → Bluetooth → Paired Devices</li>
+            <li>Compare paired name to iPad’s Bluetooth name</li>
+          </ol>
+        </ul>
+
+        <div class="resolution">
+          <label><input type="checkbox" id="resolved3" /> Issue Resolved</label>
+          <label><input type="checkbox" id="tier2_3" /> Needs Tier II Assistance</label>
+          <p id="feedback3" style="display:none; margin-top:0.5rem;"></p>
+        </div>
+
+        <button class="next-btn" data-next="3">Next Step</button>
+      </div>
+    </details>
+
+    <!-- Step 4 -->
+    <details>
+      <summary>4️⃣ Bluetooth Icon is Green</summary>
+      <div class="step">
+        <p>Green icon → connection established. Verify communication:</p>
+        <ol>
+          <li>Press <strong>2634</strong> → F key → Control Panel → Terminal Settings → Comm means → PCL</li>
+          <li>If PCL shows “connected” → Aktivate communicates successfully</li>
+          <li>If PCL shows “not connected” → restart Aktivate app on iPad</li>
+        </ol>
+
+        <div class="resolution">
+          <label><input type="checkbox" id="resolved4" /> Issue Resolved</label>
+          <label><input type="checkbox" id="tier2_4" /> Needs Tier II Assistance</label>
+          <p id="feedback4" style="display:none; margin-top:0.5rem;"></p>
+        </div>
+
+        <button class="next-btn" data-next="4">Next Step</button>
+      </div>
+    </details>
+
+    <!-- Step 5 -->
+    <details>
+      <summary>5️⃣ Still Not Working?</summary>
+      <div class="step">
+        <p>
+          If issues persist after following all steps:
+        </p>
+        <ul>
+          <li>Attempt re-pairing the iPad & Ingenico (follow Exceed Article)</li>
+          <li>Contact <strong>Tier II Support</strong></li>
+        </ul>
+
+        <div class="resolution">
+          <label><input type="checkbox" id="resolved5" /> Issue Resolved</label>
+          <label><input type="checkbox" id="tier2_5" /> Needs Tier II Assistance</label>
+          <p id="feedback5" style="display:none; margin-top:0.5rem;"></p>
+        </div>
+      </div>
+    </details>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Cricket iPad Setup Assistant 
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</b
