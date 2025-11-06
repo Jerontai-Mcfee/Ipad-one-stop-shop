@@ -3,44 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iPad Setup Guide</title>
+  <title>Cricket iPad Setup Guide</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header><h1>Cricket iPad Setup Guide</h1></header>
+  <header>
+    <h1>Cricket iPad Setup Guide</h1>
+  </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="troubleshooting.html">Troubleshooting</a>
-    <a href="setup.html">Setup Guides</a>
+    <a href="setup.html" class="active">Setup Guides</a>
     <a href="resources.html">Resources</a>
   </nav>
 
   <main>
-    <h2>Initial iPad Configuration</h2>
-    <ol>
-      <li>Unbox the iPad and connect to power.</li>
-      <li>Follow Apple setup until the Home screen is reached.</li>
-      <li>Connect to the store’s Wi-Fi network.</li>
-      <li>Sign in with the <strong>Cricket Retail MDM</strong> Apple ID.</li>
-      <li>Verify enrollment in the Mobile Device Management (MDM) profile.</li>
-    </ol>
+    <h2>Setup After iPad Reset</h2>
+    <p>This guide walks through preparing and enrolling a Cricket iPad for store use, including Wi-Fi configuration, Ingenico pairing, app verification, and cloud printer setup.</p>
 
-    <h2>Installing Required Apps</h2>
-    <ul>
-      <li>Aktivate</li>
-      <li>Cricket Point-of-Sale</li>
-      <li>Slack / Teams</li>
-    </ul>
+    <details open>
+      <summary>📱 iPad Initial Setup</summary>
+      <div class="step">
+        <ol>
+          <li>On the <strong>Hello</strong> screen, press the Home button.</li>
+          <li>Select <strong>English</strong> as the language.</li>
+          <li>Select <strong>United States</strong> as the region.</li>
+          <li>Appearance: Choose <strong>Default</strong>.</li>
+          <li>If prompted, choose <strong>Set Up Without Another Device</strong>.</li>
+          <li>Connect to <strong>CricketPOS</strong> Wi-Fi network.</li>
+          <li>If prompted, continue with <strong>Partial Setup</strong>.</li>
+          <li>At Remote Management, choose <strong>Enroll this iPad</strong>.</li>
+          <li>Turn on <strong>Location Services</strong>.</li>
+          <li>Tap <strong>Get Started</strong>.</li>
+        </ol>
 
-    <p>
-      Once apps are installed, continue to the <a href="troubleshooting.html">pairing and troubleshooting section</a>
-      if Bluetooth connection issues arise.
-    </p>
+        <figure>
+          <img src="images/ipad-hello.png" alt="iPad Hello Screen" />
+          <figcaption>Figure 1: iPad Hello Screen</figcaption>
+        </figure>
+      </div>
+    </details>
+
+    <details>
+      <summary>🌐 iPad Wireless Setup</summary>
+      <div class="step">
+        <h3>Set Wireless Network</h3>
+        <ol>
+          <li>Go to <strong>Settings → Wi-Fi</strong>.</li>
+          <li>Select <strong>CricketPOS</strong> network.</li>
+          <li>Enter password: <code>Aktivate@2020</code>.</li>
+          <li>Ensure connection shows as <strong>Connected</strong>.</li>
+        </ol>
+
+        <figure>
+          <img src="images/wifi-settings.png" alt="Wi-Fi settings screen" />
+          <figcaption>Figure 2: Connecting to CricketPOS Wi-Fi</figcaption>
+        </figure>
+      </div>
+    </details>
+
+    <details>
+      <summary>🔗 Pair Ingenico Link/2500i with iPad</summary>
+      <div class="step">
+        <h3>Method 1 (Preferred)</h3>
+        <ol>
+          <li>Enter <strong>2634</strong> → Press <strong>F</strong>.</li>
+          <li>Navigate to <em>Control Panel → Terminal Settings → Comm Means → Bluetooth → Phone Pair</em>.</li>
+          <li>On iPad, open <strong>Bluetooth Settings</strong> → select <strong>LK2500i_xxxxxxxx</strong>.</li>
+          <li>Verify codes match, press <strong>Green</strong> on Ingenico, then tap <strong>Pair</strong> on iPad.</li>
+        </ol>
+
+        <figure>
+          <img src="images/ingenico-bluetooth.png" alt="Ingenico Bluetooth pairing screen" />
+          <figcaption>Figure 3: Ingenico Bluetooth pairing process</figcaption>
+        </figure>
+      </div>
+    </details>
+
+    <details>
+      <summary>💻 Setting Up Link/2500 in Aktivate</summary>
+      <div class="step">
+        <ol>
+          <li>Open the <strong>Aktivate</strong> app and log in.</li>
+          <li>Enter <strong>Location ID</strong> and select the Ingenico serial number from the list.</li>
+          <li>If not listed, note the Ingenico’s serial number and contact Tier 2.</li>
+          <li>See: <a href="https://cricketshout.exceedlms.com/student/page/2360660-ros-ingenico-serial-missing-in-aktivate-workstation-setup" target="_blank">ROS: Ingenico Serial Missing in Aktivate</a>.</li>
+        </ol>
+
+        <figure>
+          <img src="images/aktivate-setup.png" alt="Aktivate setup screen" />
+          <figcaption>Figure 4: Selecting Ingenico device in Aktivate</figcaption>
+        </figure>
+      </div>
+    </details>
+
+    <details>
+      <summary>🖨️ Configure Cloud Printer</summary>
+      <div class="step">
+        <ul>
+          <li><a href="https://cricketshout.exceedlms.com/student/page/987745-ros-setting-up-the-cloud-star-printer" target="_blank">Setting Up the Cloud Star Printer</a></li>
+          <li><a href="https://cricketshout.exceedlms.com/student/page/1664646-ros-setting-up-the-epson-tm-t88vi" target="_blank">Setting Up the Epson TM-T88VI</a></li>
+        </ul>
+
+        <figure>
+          <img src="images/cloud-printer.png" alt="Cloud printer setup diagram" />
+          <figcaption>Figure 5: Cloud printer setup overview</figcaption>
+        </figure>
+      </div>
+    </details>
   </main>
 
   <footer>
-    &copy; 2025 Cricket iPad Setup Assistant
+    &copy; 2025 Cricket iPad Setup Assistant | Internal Use Only
   </footer>
 
   <script src="assets/js/script.js"></script>
